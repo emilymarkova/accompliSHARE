@@ -1,23 +1,31 @@
 //
 //  ContentView.swift
-//  group_app
+//  navigation
 //
-//  Created by Emily Markova on 7/31/23.
+//  Created by Emily Markova on 7/28/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView{
+            GalleryView()
+                .tabItem{
+                    Image(systemName: "person.2")
+                }
+            ToDoListView()
+                .tabItem{
+                    Image(systemName: "house")
+                }
+            ProfileView()
+                .tabItem{
+                    Image(systemName: "person.fill")
+                }
         }
-        .padding()
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
