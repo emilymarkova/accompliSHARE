@@ -1,5 +1,5 @@
 //
-//  ProfileView.swift
+//  ToDoListView.swift
 //  group_app
 //
 //  Created by Emily Markova on 7/31/23.
@@ -7,24 +7,25 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct ToDoListView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                Text("Profile View")
+                Text("Welcome to your account!")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+
             }
             
         }
-        .navigationTitle("Profile")
+        .navigationTitle("Home")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarHidden(true)
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct ToDoListView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ToDoListView()
     }
 }
