@@ -37,6 +37,7 @@
 		D5EF21F02A7968C200E10FB8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D5EF21EF2A7968C200E10FB8 /* FirebaseFirestore */; };
 		D5EF21F22A796D9700E10FB8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EF21F12A796D9700E10FB8 /* Extensions.swift */; };
 		E009E0942A7AF4870093AAF8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E009E0932A7AF4870093AAF8 /* SearchBar.swift */; };
+		E009E09D2A7AFD060093AAF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E009E09C2A7AFD060093AAF8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		D5EF21EC2A79646800E10FB8 /* group-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "group-app-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D5EF21F12A796D9700E10FB8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E009E0932A7AF4870093AAF8 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		E009E09C2A7AFD060093AAF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 		D5EF21E92A79646600E10FB8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E009E09C2A7AFD060093AAF8 /* GoogleService-Info.plist */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5991D472A784C6D000258DB /* Preview Assets.xcassets in Resources */,
+				E009E09D2A7AFD060093AAF8 /* GoogleService-Info.plist in Resources */,
 				D5991D442A784C6D000258DB /* Assets.xcassets in Resources */,
 				D5EF21BA2A78D05200E10FB8 /* GoogleService-Info.plist in Resources */,
 			);

@@ -28,6 +28,10 @@ struct ContentView: View {
                 .tabItem{
                     Label("Profile", systemImage:"person.circle")
                 }
+            SearchBarView()
+                .tabItem{
+                    Label("Search", systemImage:"magnifyingglass")
+                }
         }
     }
 }
