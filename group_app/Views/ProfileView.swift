@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct ProfileView: View {
-//@StateObject var profileView = ToDoListViewViewModel()
+    @StateObject var viewModel = ProfileViewViewModel()
 
     var body: some View {
         NavigationStack{
             VStack{
+                //sign out
+                Button("Log Out"){
+                    viewModel.logOut()
+                }
+                .tint(.red)
+                .padding()
             }
             .navigationTitle("Profile")
             
