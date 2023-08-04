@@ -36,7 +36,6 @@
 		D5EF21EE2A79646F00E10FB8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D5EF21ED2A79646F00E10FB8 /* FirebaseAuth */; };
 		D5EF21F02A7968C200E10FB8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D5EF21EF2A7968C200E10FB8 /* FirebaseFirestore */; };
 		D5EF21F22A796D9700E10FB8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EF21F12A796D9700E10FB8 /* Extensions.swift */; };
-		E009E0942A7AF4870093AAF8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E009E0932A7AF4870093AAF8 /* SearchBar.swift */; };
 		E009E09D2A7AFD060093AAF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E009E09C2A7AFD060093AAF8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +66,6 @@
 		D5EF21E72A78DDD600E10FB8 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 		D5EF21EC2A79646800E10FB8 /* group-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "group-app-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D5EF21F12A796D9700E10FB8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		E009E0932A7AF4870093AAF8 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		E009E09C2A7AFD060093AAF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,7 +139,6 @@
 				D5991D412A784C6B000258DB /* ContentView.swift */,
 				D5991D4F2A786349000258DB /* ProfileView.swift */,
 				D5991D4D2A78632C000258DB /* ToDoListView.swift */,
-				E009E0932A7AF4870093AAF8 /* SearchBar.swift */,
 				D5EF21BE2A78D21700E10FB8 /* NewItemView.swift */,
 				D5EF21C02A78D22A00E10FB8 /* LoginView.swift */,
 				D5EF21CE2A78D3B200E10FB8 /* ToDoListItemView.swift */,
@@ -276,7 +273,6 @@
 				D5EF21E62A78D7FC00E10FB8 /* HeaderView.swift in Sources */,
 				D5EF21DE2A78D46300E10FB8 /* LoginViewViewModel.swift in Sources */,
 				D5EF21C12A78D22A00E10FB8 /* LoginView.swift in Sources */,
-				E009E0942A7AF4870093AAF8 /* SearchBar.swift in Sources */,
 				D5EF21E82A78DDD600E10FB8 /* TLButton.swift in Sources */,
 				D5EF21E02A78D47100E10FB8 /* RegisterViewViewModel.swift in Sources */,
 				D5991D502A786349000258DB /* ProfileView.swift in Sources */,

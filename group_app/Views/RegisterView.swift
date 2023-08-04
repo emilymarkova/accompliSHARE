@@ -13,11 +13,15 @@ struct RegisterView: View {
         VStack {
             //header
             HeaderView(title: "Register", subtitle: "Start organizing todos", angle: -15, background: .orange)
-            Form{
+            Form {
                 TextField("Full Name", text: $viewModel.name)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .autocorrectionDisabled()
                 TextField("Email Address", text: $viewModel.email)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .autocapitalization(.none)
+                    .autocorrectionDisabled()
+                TextField("Biography", text: $viewModel.bio)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .autocapitalization(.none)
                     .autocorrectionDisabled()

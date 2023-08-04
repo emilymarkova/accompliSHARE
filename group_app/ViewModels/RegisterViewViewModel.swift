@@ -10,6 +10,7 @@ import Foundation
 
 class RegisterViewViewModel: ObservableObject {
     @Published var name = ""
+    @Published var bio = ""
     @Published var email = ""
     @Published var password = ""
     
@@ -32,7 +33,7 @@ class RegisterViewViewModel: ObservableObject {
     
     private func insertUserRecord(id:String){
         //create user object
-        let newUser = User(id: id, name: name, email: email, joined: Date().timeIntervalSince1970)
+        let newUser = User(id: id, bio: bio, name: name, email: email, joined: Date().timeIntervalSince1970, following: [], followers: [])
         
         //insert into database
         let db = Firestore.firestore()
