@@ -89,4 +89,3 @@ class TimerViewViewModel: NSObject, ObservableObject, UNUserNotificationCenterDe
         UNUserNotificationCenter.current().add(request)
     }
 }
-

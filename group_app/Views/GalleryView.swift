@@ -1,25 +1,70 @@
 //
 //  GalleryView.swift
-//  group_app
+//  accompliSHARE1
 //
-//  Created by Emily Markova on 7/31/23.
+//  Created by Rachel Yoon on 8/3/23.
 //
 
 import SwiftUI
 
 struct GalleryView: View {
     var body: some View {
-        NavigationStack{
-            VStack{
-                Text("Friends View")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-            }
+        VStack {
+            Text("Gallery")
+                .font(.title)
+                .fontWeight(.bold)
+                .padding(.top, 10)
+            Divider()
             
+            ScrollView {
+        
+                VStack(alignment: .leading) {
+                Text("Michelle Han [02/14/23]")
+                        .buttonStyle(.borderedProminent)
+                        .fontWeight(.thin)
+                        .foregroundColor(Color.black)
+                    
+                Image("Michelle")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                                
+                Text("                                                                                                                           Rachel Yoon [02/15/23]")
+                        .buttonStyle(.borderedProminent)
+                        .padding(.top, 10)
+                        .fontWeight(.thin)
+                        .foregroundColor(Color.black)
+                Image("Rachel")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                
+                Text("                                                                                                                           Alicia Chiang [02/20/23]")
+                        .buttonStyle(.borderedProminent)
+                        .padding(.top, 10)
+                        .fontWeight(.thin)
+                        .foregroundColor(Color.black)
+                Image("Alicia1")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                
+                Text("                                                                                                                           Aayushi Garg [02/25/23]")
+                        .buttonStyle(.borderedProminent)
+                        .padding(.top, 10)
+                        .fontWeight(.thin)
+                        .foregroundColor(Color.black)
+                Image("Aayushi1")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+            }
         }
-        .navigationTitle("Friends")
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarHidden(true)
+            .padding()
+            .cornerRadius(25)
+            .padding()
+            .padding()
+            .padding(.bottom, 50)
+            .padding(.top, -20)
+        }
+        
+    
     }
 }
 

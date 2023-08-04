@@ -1,22 +1,20 @@
+////
+////  TimerView.swift
+////  group_app
+////
+////  Created by Emily Markova on 8/3/23.
+////
 //
-//  TimerView.swift
-//  group_app
+//import SwiftUI
 //
-//  Created by Emily Markova on 8/2/23.
+//struct TimerView: View {
+//    var body: some View {
+//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//    }
+//}
 //
-
-import SwiftUI
-
-struct TimerView: View {
-    @EnvironmentObject var timerModel: TimerViewViewModel
-    var body: some View {
-        StudyView()
-            .environmentObject(timerModel)
-    }
-}
-
-struct TimerView_Previews: PreviewProvider {
-    static var previews: some View {
-        TimerView()
-    }
-}
+//struct TimerView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TimerView()
+//    }
+//}

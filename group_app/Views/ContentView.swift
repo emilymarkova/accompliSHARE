@@ -1,69 +1,64 @@
 //
 //  ContentView.swift
-//  navigation
+//  accompliSHARE1
 //
-//  Created by Emily Markova on 7/28/23.
+//  Created by Michelle Han on 8/2/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel = ContentViewViewModel()
-    @StateObject var timerModel = TimerViewViewModel()
-    @StateObject var profileViewModel = ProfileViewViewModel(userName: "")
-    
-    @Environment(\.scenePhase) var phase
-    
-    @State var lastActiveTimeStamp: Date = Date()
+    @State private var searchText = ""
+
+    let people: [String] = ["Michelle Han", "Emily Markova", "Gnapika Birlangi", "Rachel Yoon", "Alicia Chiang", "Aayushi Garg", "Margot Robbie",  "Taylor Swift", "Dwayne Johnson", "Karlie Kloss"]
+
     var body: some View {
-        if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
-            accountView
-                .environmentObject(viewModel)
-                .environmentObject(timerModel)
-        } else {
-            LoginView()
-        }
-    }
-    @ViewBuilder
-    var accountView: some View {
-        TabView {
-            ToDoListView(userId: viewModel.currentUserId)
-                .tabItem{
-                    Label("Home", systemImage:"house")
-                }
-            ProfileView(viewModel: profileViewModel)
-                .tabItem{
-                    Label("Profile", systemImage:"person.circle")
-                }
-            StudyView()
-                .tabItem{
-                    Label("Study", systemImage: "clock")
-                }
-                .onChange(of: phase) { newValue in
-                    if newValue == .background{
-                        lastActiveTimeStamp = Date()
-                    }
-                    if newValue == .active {
-                        //finding the difference
-                        let currentTimeStampDiff = Date().timeIntervalSince(lastActiveTimeStamp)
-                        if timerModel.totalSeconds - Int(currentTimeStampDiff) <= 0{
-                            timerModel.isStarted = false
-                            timerModel.totalSeconds = 0
-                            timerModel.isFinished = true
-                        } else {
-                            timerModel.totalSeconds -= Int(currentTimeStampDiff)
+        NavigationView {
+            VStack {
+                Text("Find Friends")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding(.top, 90)
+                    .padding(.bottom, 20)
+
+                TextField("Search...", text: $searchText)
+                    .padding(7)
+                    .background(Color.white)
+                    .cornerRadius(8)
+                    .padding(.horizontal, 10)
+
+                ScrollView {
+                    VStack(spacing: 10) {
+                        ForEach(people.filter { person in
+                            !searchText.isEmpty && person.lowercased().contains(searchText.lowercased())
+                        }, id: \.self) { person in
+                            if person == "Karlie Kloss" {
+                                NavigationLink(destination: KarlieKlossView1(user: User.MOCK_USERS[9])) {
+                                    Text(person)
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .padding()
+                                        .background(Color(red: 128/255, green: 185/255, blue: 235/255))
+                                        .cornerRadius(8)
+                                        .foregroundColor(.white)
+                                }
+                            } else {
+                                Text(person)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding()
+                                    .background(Color(red: 128/255, green: 185/255, blue: 235/255))
+                                    .cornerRadius(8)
+                                    .foregroundColor(.white)
+                            }
                         }
                     }
+                    .padding(.horizontal)
                 }
-            SearchView()
-                .tabItem{
-                    Label("Search", systemImage: "magnifyingglass.circle.fill")
-                }
-            
+            }
+            .background(Color(red: 240/255, green: 248/255, blue: 255/255))
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
